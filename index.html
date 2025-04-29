@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit trees Filter</title>
+    <style>
+        /* Basic layout and styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .filter-section {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .filter-section label {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+
+        .filter-section select {
+            font-size: 1rem;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .plants-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .plant-item {
+            display: inline-block;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .plant-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .plant-item h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .plant-item p {
+            padding: 10px;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Hidden class for filtering */
+        .hidden {
+            display: none;
+        }
+
+        /* Hover effect for plant items */
+        .plant-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+        h1{
+          text-align: center;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: green;
+        }
+    </style>
+</head>
+<body>
+  <h1>Fruit Trees</h1>
+    <section class="plants-gallery">
+        <!-- Plant Item 1 -->
+        <div class="plant-item low-maintenance" id="plant1">
+            <img src="./assets/plum tree.jpg" alt="Plant 1">
+            <h3>Plum Tree</h3>
+            <p>plums are enjoyed fresh as a dessert fruit o added to salads, smoothies, and other dishes.</p>
+            <b>₹132</b>
+        </div>
+
+        <!-- Plant Item 2 -->
+        <div class="plant-item air-purifying" id="plant2">
+            <img src="./assets/pomegranate.jpg" alt="Plant 2">
+            <h3>pomegranate Tree</h3>
+            <p>pomegranates are good source of nutrients, including fiber, vitamins, and minerals like potassium and magnesium.</p>
+            <b>₹94</b>
+        </div>
+
+        <!-- Plant Item 3 -->
+        <div class="plant-item flowering" id="plant3">
+            <img src="./assets/pear tree.jpg" alt="Plant 3">
+            <h3>pear Tree</h3>
+            <p>pears are fruits produced and consumed around the world, growing on a tree and , harvested in late summer into mid-autumn.</p>
+            <b>₹349</b>
+        </div>
+
+        <!-- Add 47 more plant items below -->
+        <div class="plant-item low-maintenance" id="plant4">
+            <img src="./assets/peach.jpg" alt="Plant 4">
+            <h3>Peach Tree</h3>
+            <p>the tree leaves and blossoms have also been used traditionally in medicine and cuisine for their aromatic and medicinal properties.</p>
+            <b>₹93</b>
+        </div>
+
+        <div class="plant-item air-purifying" id="plant5">
+            <img src="./assets/guava.jpg" alt="Plant 5">
+            <h3>Guava Tree</h3>
+            <p>guava fruit offers numerous health benefits due to its rich nutrient profile.</p>
+            <b>₹40</b>
+        </div>
+
+        <div class="plant-item flowering" id="plant6">
+            <img src="./assets/figs tree.webp" alt="Plant 6">
+            <h3>Figs Tree</h3>
+            <p>Figs trees are used for various purposes, food, medcine and cultural practices.</p>
+            <b>₹69</b>
+        </div>
+
+        <!-- More plant items (repeat the structure as needed) -->
+        <div class="plant-item low-maintenance" id="plant7">
+            <img src="./assets/apricot.jpg" alt="Plant 7">
+            <h3>Apricot Tree</h3>
+            <p>appricot offers a range of uses, from being a nutrious food source to being used in skin careand traditional remedies.</p>
+            <b>₹104</b>
+        </div>
+
+        <div class="plant-item air-purifying" id="plant8">
+            <img src="./assets/apple.jpg" alt="Plant 8">
+            <h3>Apple Tree</h3>
+            <p>Apples are used for a widevariety of purposes, both in terms of their culinary uses and their health benifits.</p>
+            <b>₹100</b>
+        </div>
+
+        <section class="plants-gallery">
+            <!-- Plant Item 10 -->
+            <div class="plant-item low-maintenance" id="plant1">
+                <img src="./assets/banana.jpg" alt=Plant 1">
+                <h3>Banana Tree</h3>
+                <p>Banana is a nutrious, low-calorie ffruit that can help improve blood sugar levels, prevents constipation, support gut and heart health, and aid in weight loss.</p>
+                <b>₹108</b>
+            </div>
+    
+            <!-- Plant Item 2 -->
+            <div class="plant-item air-purifying" id="plant2">
+                <img src="./assets/papaya.jpg" alt="Plant 2">
+                <h3>Papaya Tree</h3>
+                <p>It can be used to improve digestion, boost immunity and potentially aid in weight management.</p>
+                <b>₹55</b>
+            </div>
+    
+            <!-- Plant Item 3 -->
+            <div class="plant-item flowering" id="plant3">
+                <img src="./assets/olive.jpg" alt="Plant 3">
+                <h3>Olive Tree</h3>
+                <p>It's commonly used to reduce inflamation, boost immune function, fight infection and promote cardivascalar health.</p>
+                <b>₹105</b>
+            </div>
+    
+            <!-- Add 47 more plant items below -->
+            <div class="plant-item low-maintenance" id="plant4">
+                <img src="./assets/mulberry.jpg" alt="Plant 4">
+                <h3>mulberry Tree</h3>
+                <p>Mulberry fruit contains Anthocyanins, a bioactive compound that helps protect cells from oxidative stress and damage, which can lead to cancer.</p>
+            <b>₹499</b>   
+                 </div>
+    
+            <div class="plant-item air-purifying" id="plant5">
+                <img src="./assets/grapes.jpg" alt="Plant 5">
+                <h3>Grapes Tree</h3>
+                <p>Vitis is a genus of 81 accepted species of vining plants in the flowering plant family Vitaceae.</p>
+                <b>₹135</b>
+            </div>
+    
+            <div class="plant-item flowering" id="plant6">
+                <img src="./assets/cherry.jpg" alt="Plant 6">
+                <h3>Cherry Tree</h3>
+                <p>Have a low glycaemic score, may lower blood pleasure, it helps to manage blood sugar.</p>
+                <b>₹200</b>
+            </div>
+    
+            <!-- More plant items (repeat the structure as needed) -->
+            <div class="plant-item low-maintenance" id="plant7">
+                <img src="./assets/persimmon.jpg" alt="Plant 7">
+                <h3>persimmon Tree</h3>
+                <p>persimmons offer a variety of health benefits, including boosting immunity, promoting heart health, supporting digestion, and improving eye health.</p>
+                <b>₹128</b>
+            </div>
+    
+            <div class="plant-item air-purifying" id="plant8">
+                <img src="./assets/bitter orange.png" alt="Plant 8">
+                <h3>Bitter orange Tree</h3>
+                <p>Bitter orange , taken by itself are with stimulants such as caffine or caffine containing herbs, might increase the risk for high blood pressure, heart attack.</p>
+                <b>₹98</b>
+            </div>
+    
+            <!-- Repeat similar blocks for all 50 plants -->
+           
+
+            <section class="plants-gallery">
+                <!-- Plant Item 1 -->
+                <div class="plant-item low-maintenance" id="plant1">
+                    <img src="./assets/lychee.jpg" alt="Plant 1">
+                    <h3>Lychee Tree</h3>
+                    <p>Litchs contains vitamins and antioxidants that helps boost your immune system and improve skin and hair health.</p>
+                    <b>₹140</b>
+                </div>
+        
+                <!-- Plant Item 2 -->
+                <div class="plant-item air-purifying" id="plant2">
+                    <img src="./assets/lemon.jpg" alt="Plant 2">
+                    <h3>Lemon Tree</h3>
+                    <p>Lemons are rich source of vitamin c, making them benefits for health, and their juice and rind rind can be used in cooking, cleaning, and skincare.</p>
+                    <b>₹30</b>
+                </div>
+        
+                <!-- Plant Item 3 -->
+                <div class="plant-item flowering" id="plant3">
+                    <img src="./assets/coconut.jpg" alt="Plant 3">
+                    <h3>Coconut Tree</h3>
+                    <p>Coconut offer various health benefits, including improved gut health, potential weight management support, and a boost to the immune system.</p>
+                    <b>₹30</b>
+                </div>
+        
+                <!-- Add 47 more plant items below -->
+                <div class="plant-item low-maintenance" id="plant4">
+                    <img src="./assets/date palm.jpg" alt="Plant 4">
+                    <h3>Date palm Tree</h3>
+                    <p>They are good of fiber, which can improve digestion, prevent constipation, and contribute to a healthy gut microbiome.</p>
+                    <b>₹300</b>
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant5">
+                    <img src="./assets/avocado.jpg" alt="Plant 5">
+                    <h3>Avocado Tree</h3>
+                    <p>Avocado offer numerous benefits for the body, including improved heart health, brain function, and skin health.</p>
+                    <b>₹562</b>
+                </div>
+        
+                <div class="plant-item flowering" id="plant6">
+                    <img src="./assets/water melon.jpg" alt="Plant 6">
+                    <h3>Water Melon Tree</h3>
+                    <p>Excellent hydration, a source of vital nutrients like vitamin c and potassium, and a good source of antioxidants like lycopene.</p>
+                    <b>₹130</b>
+                </div>
+        
+                <!-- More plant items (repeat the structure as needed) -->
+                <div class="plant-item low-maintenance" id="plant7">
+                    <img src="./assets/dragon.webp" alt="Plant 7">
+                    <h3>Dragon Tree</h3>
+                    <p>Dragon fruits high fiber content promotes healthy digestion and prevents constipation.</p>
+                    <b>₹130</b>
+                </div>
+        
+                <div class="plant-item air-purifying" id="plant8">
+                    <img src="./assets/jack.jpg" alt="Plant 8">
+                    <h3>Jack Tree</h3>
+                    <p>Combating constipation, promoting weight loss, managing blood pressure.</p>
+                    <b>₹230</b>
+                </div>
+        
+                <!-- Repeat similar blocks for all 50 plants -->
+                
+
+                <section class="plants-gallery">
+                    <!-- Plant Item 1 -->
+                    <div class="plant-item low-maintenance" id="plant1">
+                        <img src="./assets/sapota.jpg" alt="Plant 1">
+                        <h3>Sapota Tree</h3>
+                        <p>It is a good source of dietary fiber, which aids digestion and helps with weight management.</p>
+                        <b>₹65</b>
+                    </div>
+            
+                    <!-- Plant Item 2 -->
+                    <div class="plant-item air-purifying" id="plant2">
+                        <img src="./assets/berry bush.jpg" alt="Plant 2">
+                        <h3>Berry bush Tree</h3>
+                        <p>The beautyberry plant has a rich history in ethnobotanical and ethnomedicinal practices, particularly among Native American tribes. These indigenous communities traditionally used the plant for its medicinal properties.
+
+                            .</p>
+                            <b>₹250</b>
+                    </div>
+            
+                    <!-- Plant Item 3 -->
+                    <div class="plant-item flowering" id="plant3">
+                        <img src="./assets/pancy.jpg" alt="Plant 3">
+                        <h3>Pancy Tree</h3>
+                        <p>The pansy plant is high in mineral salts mucilage and carotenoids. There are traces of vitamin C, tannin, and essential oils present in the herb as well. Pansy also contains violine, salicylic acid, and cyclotides .</p>
+                        <b>₹40</b>
+                    </div>
+            
+                    <!-- Add 47 more plant items below -->
+                    <div class="plant-item low-maintenance" id="plant4">
+                        <img src="./assets/Raspberry.jpg.crdownload" alt="Plant 4">
+                        <h3>Raspberry Tree</h3>
+                        <p>A great source of fiber, vitamin C, and powerful antioxidants, raspberries offer a variety of health and nutrition benefits. You can incorporate raspberries into your diet by adding them to salads or smoothies.</p>
+                        <b>₹598</b>
+                    </div>
+            
+    </section>
+
+    <script>
+        // JavaScript to handle the filter functionality
+        const filterSelect = document.getElementById('plant-filter');
+        const plantItems = document.querySelectorAll('.plant-item');
+
+        // Event listener for the filter dropdown change
+        filterSelect.addEventListener('change', function() {
+            const filterValue = filterSelect.value;
+
+            // Loop through all plant items and apply the filter
+            plantItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.classList.remove('hidden');
+                } else if (item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
